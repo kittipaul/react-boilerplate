@@ -14,16 +14,22 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-import HomePage from 'containers/HomePage/Loadable';
+import Header from 'components/Header/index';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
+import MainPage from 'containers/MainPage/Loadable';
+import GoalList from 'containers/GoalList/Loadable';
+
+import AppWrapper from './AppWrapper';
 
 export default function App() {
   return (
-    <div>
+    <AppWrapper>
+      <Header />
       <Switch>
-        <Route exact path="/" component={HomePage} />
+        <Route exact path="/" component={MainPage} />
+        <Route path="/goals" component={GoalList} />
         <Route component={NotFoundPage} />
       </Switch>
-    </div>
+    </AppWrapper>
   );
 }

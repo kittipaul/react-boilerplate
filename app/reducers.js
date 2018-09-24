@@ -7,7 +7,6 @@ import { fromJS } from 'immutable';
 import { LOCATION_CHANGE } from 'react-router-redux';
 
 import languageProviderReducer from 'containers/LanguageProvider/reducer';
-
 /*
  * routeReducer
  *
@@ -18,7 +17,9 @@ import languageProviderReducer from 'containers/LanguageProvider/reducer';
 
 // Initial routing state
 const routeInitialState = fromJS({
-  location: null,
+  pathname: '/',
+  search: '',
+  hash: '',
 });
 
 /**
