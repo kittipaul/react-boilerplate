@@ -11,7 +11,8 @@ import ListItem from 'components/ListItem/Loadable';
 
 function List({ goals }) {
   if (goals) {
-    return goals.reverse().map(goal => <ListItem key={goal.goal} {...goal} />);
+    const recentGoal = goals.slice().reverse();
+    return recentGoal.map(goal => <ListItem key={goal.goal} {...goal} />);
   }
   return <div />;
 }
