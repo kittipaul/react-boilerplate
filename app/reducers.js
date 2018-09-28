@@ -17,9 +17,7 @@ import languageProviderReducer from 'containers/LanguageProvider/reducer';
 
 // Initial routing state
 const routeInitialState = fromJS({
-  pathname: '/',
-  search: '',
-  hash: '',
+  location: null,
 });
 
 /**
